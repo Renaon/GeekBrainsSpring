@@ -1,4 +1,4 @@
-package ru.geekbrains.servlet.hw1;
+package ru.geekbrains.hw.hw1;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package ru.geekbrains.servlet.hw1;
+package ru.geekbrains.hw.hw1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
