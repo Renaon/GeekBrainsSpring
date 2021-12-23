@@ -1,4 +1,4 @@
-package ru.geekbrains.servlet.hw1;
+package ru.geekbrains.hw1;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;

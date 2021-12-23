@@ -1,4 +1,4 @@
-package ru.geekbrains.hw.hw2.servlet;
+package ru.geekbrains.hw2.servlet;
 
 
 import org.slf4j.Logger;
