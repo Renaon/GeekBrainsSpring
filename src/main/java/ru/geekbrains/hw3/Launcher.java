@@ -12,10 +12,11 @@ public class Launcher {
         ProtectionDomain domain = Launcher.class.getProtectionDomain();
         URL location = domain.getCodeSource().getLocation();
         WebAppContext webAppContext = new WebAppContext();
-        webAppContext.setContextPath("hw3");
+        webAppContext.setContextPath("/");
         webAppContext.setWar(location.toExternalForm());
         server.setHandler(webAppContext);
         server.start();
         server.join();
+
     }
 }
