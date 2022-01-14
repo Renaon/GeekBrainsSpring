@@ -1,20 +1,19 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ include file="header.jsp" %>
 
-<!DOCTYPE html>
-
-<html lang="ru" xmlns:form="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Введите Ваше имя</title>
+    <title>Adding product</title>
 </head>
 <body>
-    <form:form action="processForm" modelAttribute="product">
-        <legend><h1>Добавить товар </h1></legend>
-        Title: <form:input path="title" />
+    <h1>Add a product </h1>
+    <form:form modelAttribute="product" method="post">
+        <form:input path="title" type='text'/>
         <br>
-        Cost: <form:input path="price" />
+        <form:input path="price"type='text'/>
         <br>
-        <input type="submit" value="Submit" />
+        <button>Submit</button>
     </form:form>
 </body>
-</html>
+
+
+<%@ include file="footer.jsp" %>

@@ -12,6 +12,7 @@ public class Launcher {
         ProtectionDomain domain = Launcher.class.getProtectionDomain();
         URL location = domain.getCodeSource().getLocation();
         WebAppContext webAppContext = new WebAppContext();
+        webAppContext.setResourceBase("src/main/webapp");
         webAppContext.setContextPath("/");
         webAppContext.setWar(location.toExternalForm());
         server.setHandler(webAppContext);

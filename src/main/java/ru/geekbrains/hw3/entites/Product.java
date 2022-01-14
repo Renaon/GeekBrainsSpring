@@ -1,30 +1,31 @@
 package ru.geekbrains.hw3.entites;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-@Component("product")
-@Scope("prototype")
 public class Product {
-    private int id = 0;
     private String title;
-    private int cost;
+    private int price;
+    private static int id;
 
-    public Product(String title, int cost){
-        this.id++;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
         this.title = title;
-        this.cost = cost;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public int getCost() {
-        return cost;
+    public Product(){
+        Product.id++;
     }
 }

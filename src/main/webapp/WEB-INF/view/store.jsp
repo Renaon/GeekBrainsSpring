@@ -1,20 +1,18 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="header.jsp" %>
+<%@ page import="ru.geekbrains.hw3.repositories.ProductsRepository" %>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css" />
-</head>
-
-<body>
+<body modelAttribute="productsRepository">
 <h1>Store</h1>
-<ul>
-    <c:forEach var="item" items="${students.students}">
-        <li>${p.getTitle()}</li>
-        <li>${p.getCost()}</li>
-    </c:forEach>
-</ul>
+	<%
+		for(int i=0; i<productsRepository.size(); i++){
+			String printTitle = productsRepository.getTitleById(i);
+			int printPrice = productsRepository.getPriceById(i);
+			%>
+			${printTitle}
+			${printTitle}
+			<%
+		}
+	%>
 
 </body>
-</html>
+<%@ include file="footer.jsp" %>
