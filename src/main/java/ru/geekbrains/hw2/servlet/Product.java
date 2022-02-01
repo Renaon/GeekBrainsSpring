@@ -1,4 +1,4 @@
-package ru.geekbrains.hw.hw2;
+package ru.geekbrains.hw2.servlet;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

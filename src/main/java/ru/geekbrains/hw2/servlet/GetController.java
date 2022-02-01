@@ -1,12 +1,9 @@
-package ru.geekbrains.hw.hw2.servlet;
+package ru.geekbrains.hw2.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import ru.geekbrains.hw.hw2.Product;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
