@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.geekbrains.hw3.entites.Product;
-import ru.geekbrains.hw3.repositories.ProductsRepository;
+import ru.geekbrains.hw3.service.DbHandler;
 
 @Controller
 @RequestMapping("/product")
 public class StoreController {
-    private ProductsRepository productsRepository = new ProductsRepository();
+    private final DbHandler dbHandler = new DbHandler();
 
     @GetMapping("/add")
     public String add(Model model){
@@ -23,13 +23,14 @@ public class StoreController {
 
     @PostMapping("/add")
     public String pcessAddres(@ModelAttribute("product") Product product, Model model){
-        this.productsRepository.save(product);
+        dbHandler.addProduct(product);
         return "success";
     }
 
     @GetMapping("/store")
     public String store(Model model){
-        model.addAttribute("productsRepository", productsRepository);
+        Product[] products = dbHandler.getProducts();
+        model.addAttribute("products", products);
         return "store";
     }
 }

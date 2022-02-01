@@ -28,4 +28,8 @@ public class Product {
     public Product(){
         Product.id++;
     }
+    public Product(String title, int price){
+        this.title = title;
+        this.price = price;
+    }
 }
